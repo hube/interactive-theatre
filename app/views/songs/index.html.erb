@@ -1,0 +1,12 @@
+<table>
+  <%= form_tag '/songs', method: :get do %>
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Search" %>
+  <% end %>
+
+  <% @songs.each do |song| %>
+    <tr>
+      <td><%= song.title %></td>
+    </tr>
+  <% end %>
+</table>
