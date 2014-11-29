@@ -1,0 +1,12 @@
+<%= form_for @song do |f| %>
+  Title:
+  <%= f.text_field :title %>
+  <br />
+  Length:
+  <%= f.text_field :length %>
+  <br />
+  Lyrics:
+  <%= f.text_area :lyrics %>
+  <br />
+  <%= f.submit %>
+<% end %>
