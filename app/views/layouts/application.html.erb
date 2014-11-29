@@ -10,6 +10,9 @@
 
 <%= render partial: 'layouts/header' %>
 
+<%= flash[:notice] %>
+<%= flash[:error] %>
+
 <%= yield %>
 
 </body>
