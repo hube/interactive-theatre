@@ -1,12 +1,12 @@
-<%= form_for @song do |f| %>
+<%= form_for @musical do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <br />
   <%= f.label :length %>
   <%= f.text_field :length %>
   <br />
-  <%= f.label :lyrics %>
-  <%= f.text_area :lyrics %>
+  <%= f.label :year %>
+  <%= f.text_field :year %>
   <br />
   <%= f.submit %>
 <% end %>

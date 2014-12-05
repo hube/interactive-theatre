@@ -15,12 +15,11 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
     if @song.save
-      flash[:notice] = "Song successfully saved"
+      flash[:notice] = "Song successfully created!"
       redirect_to @song
     else
-      flash[:error] = "There was a problem with your input"
+      flash[:error] = "There was a problem saving your song"
       render :new
-      # redirect_to new_song_path
     end
   end
 
