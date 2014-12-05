@@ -3,5 +3,5 @@ class Musical < ActiveRecord::Base
 
   validates :title, presence: true
   validates :length, :year,
-            numericality: { only_integer: true, greater_than: 0 }
+            numericality: { allow_blank: true, only_integer: true, greater_than: 0 }
 end
