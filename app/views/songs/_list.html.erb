@@ -1,0 +1,19 @@
+<table>
+  <caption>Songs</caption>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Length (seconds)</th>
+      <th>Musical</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% songs.each do |song| %>
+      <tr>
+        <td><%= link_to(song.title, song) %></td>
+        <td><%= song.length %></td>
+        <td><%= song.musical.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,12 +1,6 @@
-<table>
-  <%= form_tag '/songs', method: :get do %>
-    <%= text_field_tag :q, params[:q] %>
-    <%= submit_tag "Search" %>
-  <% end %>
+<%= form_tag songs_path, method: :get do %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Search Songs" %>
+<% end %>
 
-  <% @songs.each do |song| %>
-    <tr>
-      <td><%= song.title %></td>
-    </tr>
-  <% end %>
-</table>
+<%= render partial: 'songs/list', locals: { songs: @songs } %>

@@ -1,0 +1,23 @@
+<%= form_tag musicals_path, method: :get do %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Search Musicals" %>
+<% end %>
+<br />
+
+<table>
+  <caption>Musicals</caption>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Songs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @musicals.each do |musical| %>
+      <tr>
+        <td><%= link_to(musical.title, musical) %></td>
+        <td><%= musical.songs.count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
