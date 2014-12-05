@@ -1,3 +1,12 @@
 <h1><%= @musical.title %></h1>
 
-<%= render partial: 'songs/list', locals: { songs: @songs } %>
+<ul>
+  <li>Length: <%= @musical.length %> minutes</li>
+  <li>Year of first production: <%= @musical.year %></li>
+</ul>
+
+<% if @songs.count == 0 %>
+  No songs added for this musical!
+<% else %>
+  <%= render partial: 'songs/list', locals: { songs: @songs } %>
+<% end %>
