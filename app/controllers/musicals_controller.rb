@@ -1,4 +1,6 @@
 class MusicalsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @musicals = Musical.where('title LIKE :query', query: "%#{params[:q]}%")
   end
