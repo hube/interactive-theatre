@@ -30,6 +30,9 @@ gem 'rspec-rails', group: [:development, :test]
 
 gem 'devise'
 
+gem 'bootstrap-sass', '~> 3.3.1.0'
+gem 'autoprefixer-rails', '~> 4.0.2.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
