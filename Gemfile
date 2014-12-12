@@ -33,6 +33,8 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.1.0'
 gem 'autoprefixer-rails', '~> 4.0.2.1'
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
