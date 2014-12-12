@@ -34,6 +34,8 @@ gem 'autoprefixer-rails', '~> 4.0.2.1'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
+gem 'rails_12factor', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
